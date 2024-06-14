@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Landing page Food peek</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+
+    .nav-menu.ativo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+</style>
+
+<body class="bg-white text-dark">
+    <header>
+        <nav class="flex items-center justify-between p-4 shadow-md w-full fixed bg-white transition-all duration-500">
+            <a href="#" class="text-red-500 text-2xl font-semibold">F<span class="text-dark">oo</span>D P<span
+                    class="text-dark">ee</span>K</a>
+            <ul class="nav-menu hidden md:flex items-center gap-10">
+                <li class="nav-item"><a href="#"
+                        class="text-lg font-medium hover:text-red-500 transition-all duration-500">Home</a></li>
+                <li class="nav-item"><a href="#"
+                        class="text-lg font-medium hover:text-red-500 transition-all duration-500">About</a></li>
+                <li class="nav-item"><a href="#"
+                        class="text-lg font-medium hover:text-red-500 transition-all duration-500">Menu</a></li>
+                <li class="nav-item"><a href="#"
+                        class="text-lg font-medium hover:text-red-500 transition-all duration-500">Contact</a></li>
+                <i class='bx bx-search cursor-pointer text-2xl'></i>
+            </ul>
+            <div class="menu md:hidden cursor-pointer">
+                <span class="bar block w-7 h-1 rounded bg-dark m-1 transition-all duration-300"></span>
+                <span class="bar block w-7 h-1 rounded bg-dark m-1 transition-all duration-300"></span>
+                <span class="bar block w-7 h-1 rounded bg-dark m-1 transition-all duration-300"></span>
+            </div>
+        </nav>
+    </header>
+    <main class="mt-16 md:mt-0">
+        <section class="home flex flex-col md:flex-row items-center justify-between w-full h-screen p-4 md:px-40">
+            <div class="home-text max-w-xl">
+                <h4 class="text-xl text-red-500 mb-4">Welcome FooD PeeK</h4>
+                <h1 class="text-4xl md:text-6xl mb-4 leading-tight">Different spice for different tastes</h1>
+                <p class="mb-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error veniam in
+                    voluptatem magni quisquam</p>
+                <a href="#"
+                    class="home-btn py-4 px-12 bg-red-500 text-white rounded-lg font-bold transition-all duration-500 hover:bg-red-600">Order
+                    yours</a>
+            </div>
+            <div class="home-img w-full md:w-1/2 mt-8 md:mt-0">
+                <img src="./src/img/home.png" alt="hamburguer" class="w-full">
+            </div>
+        </section>
+    </main>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
